@@ -1,5 +1,6 @@
 class Solver
   def factorial(value)
+    raise 'Number must be positive' if value.negative?
     return 1 if value.zero?
 
     value * factorial(value - 1)
