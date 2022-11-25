@@ -1,4 +1,5 @@
 require_relative '../solver'
+
 describe Solver do
   context 'testing reverse method' do
     it 'should reverse the string' do
@@ -28,9 +29,14 @@ describe Solver do
       expect(solver.fizzbuzz(7)).to eq('7')
     end
   end
-  it 'Factorial method should return 120 when we pass 5' do
-    solver = Solver.new
-    expect(solver.factorial(5)).to eql 120
+
+  context 'testing factorial method' do
+    it 'should return the factorial of given number' do
+      solver = Solver.new
+      expect(solver.factorial(5)).to eql 120
+      expect(solver.factorial(0)).to eq(1)
+      expect { solver.factorial(-2) }.to raise_error('Number must be positive')
+    end
   end
 
   it 'Factorial method raise exception' do
