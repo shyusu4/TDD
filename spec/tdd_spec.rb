@@ -22,5 +22,10 @@ describe Solver do
             solver = Solver.new
             expect(solver.fizzbuzz(30)).to eq('fizzbuzz')
         end
+
+        it "should return number" do
+            solver = Solver.new
+            expect(solver.fizzbuzz(7)).to eq(7)
+        end
     end
 end
