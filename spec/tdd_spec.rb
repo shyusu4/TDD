@@ -1,3 +1,4 @@
+require_relative '../solver'
 describe Solver do
   context 'testing reverse method' do
     it 'should reverse the string' do
@@ -24,7 +25,7 @@ describe Solver do
 
     it 'should return number' do
       solver = Solver.new
-      expect(solver.fizzbuzz(7)).to eq(7)
+      expect(solver.fizzbuzz(7)).to eq('7')
     end
   end
   it 'Factorial method should return 120 when we pass 5' do
