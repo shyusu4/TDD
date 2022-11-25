@@ -31,5 +31,3 @@ class Solver
     end
   end
 end
-
-
