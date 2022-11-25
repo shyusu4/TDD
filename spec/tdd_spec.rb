@@ -32,4 +32,9 @@ describe Solver do
     solver = Solver.new
     expect(solver.factorial(5)).to eql 120
   end
+
+  it 'Factorial method raise exception' do
+    solver = Solver.new
+    expect(solver.factorial(-5)).to eql "Can't find factorial for negtive number"
+  end
 end

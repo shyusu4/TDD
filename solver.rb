@@ -1,5 +1,6 @@
 class Solver
   def factorial(value)
+    return "Can't find factorial for negtive number"  if value.negative?
     return 1 if value.zero?
 
     value * factorial(value - 1)
@@ -31,3 +32,6 @@ class Solver
     end
   end
 end
+
+# solver = Solver.new
+# solver.factorial(-5)
